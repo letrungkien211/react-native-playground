@@ -1,8 +1,8 @@
 ## Goal
-*  Learn react native by playing with it.
+Learn react native by playing with it.
 
 ## App Link
-*  [https://exp.host/@letrungkien211/react-native-playground](https://exp.host/@letrungkien211/react-native-playground)
+[https://exp.host/@letrungkien211/react-native-playground](https://exp.host/@letrungkien211/react-native-playground)
 
 ## Favorite Resources
 1. [Udemy React Native: Advanced Concepts](https://www.udemy.com/react-native-advanced/)
