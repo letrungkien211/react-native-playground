@@ -35,17 +35,19 @@ const GoogleTranslateScreen = ({ keyword, lexicalEntries, search, updateKeyword,
     const main = isSearching ?
         <Spinner size='large' /> :
         errorMessage ? <Text style={styles.errorTextStyle}>{errorMessage}</Text> :
-        <FlatList
-            data={lexicalEntries}
-            renderItem={RenderCategory}
-            keyExtractor={(item, index) => index}
-        />
+            <FlatList
+                data={lexicalEntries}
+                renderItem={RenderCategory}
+                keyExtractor={(item, index) => index}
+            />
 
     return <ScrollView>
         <SearchBar
             value={keyword}
             onChangeText={updateKeyword}
-            onSubmitEditing={() => search(keyword)} />
+            onSubmitEditing={() => search(keyword)}
+            clearButtonMode='while-editing'
+        />
         {main}
     </ScrollView>
 }
@@ -79,11 +81,11 @@ const mapStateToProps = ({ googleTranslateForm }) => {
             return filtered
         }, [])
     }
-    else if(error){
-        if(error.response && error.response.status == '404'){
+    else if (error) {
+        if (error.response && error.response.status == '404') {
             errorMessage = 'NOT FOUND'
         }
-        else{
+        else {
             errorMessage = 'Unknown error has occurred!'
         }
     }
@@ -104,7 +106,7 @@ const styles = {
     exampleStyle: {
         fontStyle: 'italic'
     },
-    errorTextStyle : {
+    errorTextStyle: {
         color: 'red',
         alignSelf: 'center'
     }

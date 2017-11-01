@@ -12,14 +12,20 @@ const ToolsScreen = ({ navigation, signOut }) => {
     return (<List
         containerStyle={{ marginTop: 0 }}>
         <ListItem
-            key="bmi"
+            key="BmiCalculatorScreen"
             onPress={() => navigation.navigate('BmiCalculatorScreen')}
             title="BMI Calculator"
         />
         <ListItem
-            key="oxforddict"
+            key="OxfordDictScreen"
             onPress={() => navigation.navigate('OxfordDictScreen')}
             title="Oxford Dictionary"
+        />
+
+        <ListItem
+            key="AzureAccountListScreen"
+            onPress={() => navigation.navigate('AzureAccountListScreen')}
+            title="Azure Accounts"
         />
     </List>
     )

@@ -6,7 +6,7 @@ import {
     OXFORD_DICT_SEARCH_ERROR,
     OXFORD_DICT_UPDATE_KEYWORD
 } from "./types"
-import {oxfordApiConfig} from '../appconfig'
+import {oxfordApiConfig} from '../config'
 
 export const search = (text) => (dispatch) => {
     if (text) {

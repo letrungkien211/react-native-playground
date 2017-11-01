@@ -11,7 +11,10 @@ import {
     ToolsScreen, 
     SettingsScreen, 
     BmiCalculatorScreen,
-    OxfordDictScreen
+    OxfordDictScreen,
+    AzureBlobExplorerScreen,
+    AzureAccountListScreen,
+    AzureAccountAddScreen
 } from "../screens"
 
 const ToolsTab = ({ navigation }) => {
@@ -103,6 +106,18 @@ export default StackNavigator(
             navigationOptions: {
                 title: 'Oxford Dictionary'
             }            
+        },
+        AzureBlobExplorerScreen: {
+            screen: AzureBlobExplorerScreen,
+            path: '/azureblob/explorer'          
+        },
+        AzureAccountListScreen: {
+            screen: AzureAccountListScreen,
+            path: '/azureblob/accounts'            
+        },
+        AzureAccountAddScreen: {
+            screen: AzureAccountAddScreen,
+            path: '/azure/accounts/add'
         }
     }
 )

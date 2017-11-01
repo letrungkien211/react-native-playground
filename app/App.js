@@ -18,7 +18,7 @@ import BmiCalculatorMiddleware from "./src/store/BmiCalculatorMiddleware";
 import firebase from 'firebase'
 import Expo from 'expo'
 
-import {firebaseConfig} from './src/appconfig'
+import {firebaseConfig} from './src/config'
 
 const middleware = applyMiddleware(ReduxThunk, logger, BmiCalculatorMiddleware)
 const store = createStore(reducers, {}, middleware)

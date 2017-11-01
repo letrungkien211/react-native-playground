@@ -6,7 +6,7 @@ import { AsyncStorage } from "react-native";
 
 const SIGNIN_TOKEN_KEY = 'SIGNIN_TOKEN_KEY'
 
-import { facebookConfig } from "../appconfig";
+import { facebookConfig } from "../config";
 
 export const signIn = (provider, isUseStoredToken) => async (dispatch) => {
     dispatch({
